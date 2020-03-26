@@ -1,14 +1,65 @@
 <!Doctype html>
 <html lang="en">
 <head>
-    <title>Project 1</title>
+    <title>Project 5 forms</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
         
 </head>
 <body>
     <h1>Project 5 forms</h1>
-
+    <p>
+        Simple form to collect Name, email address, phone, dropdown list for urgency, a radio button for business/personal and a text block to describe project</p>
+    <p>
+        References: <br>
+        <a href="https://getbootstrap.com/docs/4.0/components/forms/">BootStrap Form documentation</a><br>
+        <a href="https://www.w3schools.com/html/html_forms.asp">W3Schools documentation</a>
+    </p>
+    <form action="">
+        <div class="form-group">
+            <label for="name">First and Last name</label>
+            <input type="text" name="name" id="name" class="form-control">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="emailme">
+            <label class="form-check-label" for="emailme">
+                Preferred contact via email
+            </label>
+        </div>  
+        <div class="form-group">
+            <label for="email">Email Address</label> 
+            <input type="email" id="email" name="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="phone">Enter your phone number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" class="form-control">
+        </div>
+        <div class="form-group">
+            <p class="label">Please select the urgency of your project</p>
+            <select name="urgency" class="form-control">
+                <option value="now">Extremely urgent</option>
+                <option value="asap">Important</option>
+                <option value="normal" selected>Needs done</option>
+                <option value="low">Just Thinking</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <p class="label">Please select the type of organization</p>
+            <input type="radio" id="business" name="organization" value="business" class="form-control">
+            <label for="business">Business</label><br>
+            <input type="radio" id="personal" name="organization" value="personal" class="form-control">
+            <label for="personal">Personal</label><br>
+            <input type="radio" id="nonprofit" name="organization" value="notprofit" class="form-control">
+            <label for="nonprofit">Non Profit</label><br>
+            <input type="radio" id="other" name="organization" value="other" class="form-control">
+            <label for="other">Other</label>
+        </div>
+        <div class="form-group">
+            <textarea name="description" rows="10" cols="80" class="form-control">
+                Please enter the description of your project
+            </textarea>
+        </div>
+    </form>
     
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
@@ -16,6 +67,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>    
 </body>
 </html>
-
-https://getbootstrap.com/docs/4.0/components/forms/
-https://www.w3schools.com/html/html_forms.asp
